@@ -47,8 +47,6 @@ public class KubernetesServiceImpl implements KubernetesService {
                     .findAny()
                     .map(f -> {
                         try {
-                            System.out.println("Executando:");
-                            System.out.println(servico);
                             return f.execute(servico, queryResult);
                         } catch (Exception e) {
                             return "Comando foi encontrado mas algum erro ocorreu ao executar a ação";
