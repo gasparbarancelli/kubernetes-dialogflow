@@ -38,8 +38,6 @@ public class KubernetesServiceImpl implements KubernetesService {
             String servico = queryResult.getParameters().getFieldsMap().get("servico").getStringValue().toLowerCase();
 
             String intentName = queryResult.getIntent().getDisplayName();
-            System.out.println("Comandos: " + executeCommandList.size());
-            System.out.println("Intent: " + intentName);
 
             return executeCommandList
                     .stream()
